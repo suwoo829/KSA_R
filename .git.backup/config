@@ -1,0 +1,18 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/Sungjun01/hkustksa.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[pull]
+	rebase = false
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	email = sungjunc01@gmail.com
+	name = Sungjun Cho
