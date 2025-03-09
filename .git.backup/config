@@ -6,7 +6,7 @@
 	symlinks = false
 	ignorecase = true
 [remote "origin"]
-	url = https://github.com/Sungjun01/hkustksa.git
+	url = https://github.com/sungjunc/hkustksa.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [pull]
 	rebase = false
