@@ -1,83 +1,96 @@
 import { BaseInfo } from "@/Data/data";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 
 const Hero = () => {
-  // Create a helper function to safely split the description
-  const getDescriptionLines = () => {
-    // Check if description exists and is a string
-    if (BaseInfo && typeof BaseInfo.description === "string") {
-      return BaseInfo.description.split("\n");
-    }
-    // Return an empty array if description is not available or not a string
-    return [];
-  };
+  // Add client-side rendering with useEffect
+  const [isClient, setIsClient] = useState(false);
 
-  // Link to the Google Drive file
-  const policyDocumentLink =
-    "https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view";
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
-    <div className="w-full pt-[4vh] md:pt-[12vh] h-screen bg-[#0f0715] overflow-hidden relative">
-      <div className="flex justify-center flex-col w-4/5 h-full mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-          {/* Text Content */}
-          <div>
-            {/* Sub Heading */}
-            <h1
-              data-aos="fade-left"
-              className="text-2xl md:text-3xl lg:text-4xl mb-5 text-gray-300 font-semibold"
-            >
-              2011년도 부터 이어진 KSA, 15기를 향하며{BaseInfo?.name || ""}
-            </h1>
-
-            {/* Title */}
-            <h1
-              data-aos="fade-right"
-              data-aos-delay="100"
-              className="text-bg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-white"
-            >
-              {BaseInfo?.position || ""}
-            </h1>
-            {/* Description - Modified to handle line breaks safely */}
-            <div
-              data-aos="fade-left"
-              data-aos-delay="200"
-              className="mt-6 text-sm md:text-base text-white text-opacity-60"
-            >
-              {getDescriptionLines().map((line, index) => (
-                <p key={index}>{line}</p>
-              ))}
-            </div>
-            {/* Button with Link */}
-            <a
-              href={policyDocumentLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              className="md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 inline-flex items-center space-x-2"
-            >
-              <span>공약집</span>
-              <FaDownload />
-            </a>
+    <div className="w-full min-h-screen bg-[#dce4e4] overflow-hidden relative px-10 md:px-20 pt-28 pb-16">
+      {isClient ? (
+        <div className="flex flex-col justify-between h-full">
+          {/* Top Section with Korean Text */}
+          <div className="text-2xl md:text-3xl font-medium text-black">
+            2011년도 부터 이어진 KSA, 15기를 향하며
           </div>
-          {/* Image content */}
-          <div
-            data-aos="zoom-in"
-            data-aos-delay="400"
-            className="mx-auto hidden lg:block rounded-[3rem] border-[3.5px] border-blue-950 overflow-x-hidden"
-          >
-            <Image
-              src={BaseInfo?.profilePic || "/images/placeholder.png"}
-              alt={BaseInfo?.name || "Profile"}
-              width={600}
-              height={600}
-            />
+
+          {/* Middle Section with TRUST WORTHY and Image */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-20 mb-32 items-center">
+            <div>
+              {/* TRUST with split colors */}
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none">
+                <span className="text-[#013365]">TR</span>
+                <span className="text-[#fdca19]">UST</span>
+              </h1>
+
+              {/* WORTHY all blue */}
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none text-[#013365]">
+                WORTHY
+              </h1>
+            </div>
+
+            {/* Image content */}
+            <div className="hidden lg:block mx-auto rounded-[3rem] border-[3.5px] border-[#013365] overflow-hidden">
+              <Image
+                src={BaseInfo?.profilePic || "/images/hero.jpg"}
+                alt={BaseInfo?.name || "KSA Team"}
+                width={600}
+                height={600}
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Bottom Section with KSA Information */}
+          <div className="mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-black">
+              KSA 후보 1번
+            </h2>
+            <div className="text-lg md:text-xl space-y-2 text-black">
+              <p>회장 후보 권혁인</p>
+              <p>외무부 부회장 김희승</p>
+              <p>내무부 부회장 김수형</p>
+            </div>
+
+            {/* Download Button - Increased size and fixed link */}
+            <div className="mt-8">
+              <a
+                href="https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-[#142454] text-white font-medium text-base md:text-lg rounded inline-flex items-center hover:bg-[#013365] transition-colors"
+              >
+                <span>공약집</span>
+                <span className="ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 md:h-6 md:w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        // Loading/SSR state
+        <div className="h-full"></div>
+      )}
     </div>
   );
 };

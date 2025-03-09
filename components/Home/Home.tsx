@@ -12,6 +12,7 @@ import Project from "./Project/Project";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Reviews from "./Reviews/Reviews";
+import PolicySection from "../PolicySection";
 
 const Home = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const Home = () => {
     <div className="overflow-hidden">
       <Hero />
       <Reviews />
+      <PolicySection />
       <About />
       <Services />
       <Project />

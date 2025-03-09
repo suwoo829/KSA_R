@@ -7,7 +7,7 @@ type Props = {
 
 const SectionHeading = ({ children }: Props) => {
   return (
-    <h1 className=" bg-blue-800 w-fit text-center px-4 py-3 mx-auto text-white text-2xl sm:text-3xl md:text-4xl uppercase -rotate-6">
+    <h1 className="w-fit text-center px-4 py-3 mx-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 uppercase text-[#142454]">
       {children}
     </h1>
   );

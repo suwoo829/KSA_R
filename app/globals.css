@@ -4,7 +4,7 @@
 
 @layer components {
   .nav__link {
-    @apply relative text-base font-medium w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 text-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-right
+    @apply relative text-base font-medium w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 text-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-right;
   }
 
   .text-bg {
@@ -28,4 +28,20 @@
     border-radius: 4px;
   }
 
+  /* Background circles positioning */
+  .background-circles {
+    @apply absolute inset-0 w-full h-full overflow-hidden pointer-events-none;
+  }
+
+  /* Main content wrapper to ensure proper z-index layering */
+  .content-wrapper {
+    @apply relative z-10;
+  }
+}
+
+/* Essential positioning for body */
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
 }

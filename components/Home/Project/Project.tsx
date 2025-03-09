@@ -6,7 +6,7 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div className="pt-16 pb-16 bg-[#050709]">
+    <div className="pt-16 pb-16 bg-[#dce4e4]">
       <SectionHeading>월별 카드뉴스 예시</SectionHeading>
       <div className="w-[80%] mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
         {projectData.map((project, i) => {
@@ -30,6 +30,19 @@ const Project = () => {
             </div>
           );
         })}
+      </div>
+
+      {/* Added description text */}
+      <div className="w-[80%] mx-auto mt-12 text-center">
+        <p className="text-lg md:text-xl text-gray-700">
+          매 월 회의록, KSA 재정 상태, 다음 달 일정표를 여러분들께 공유할
+          계획이며,
+          <br />
+          카드뉴스 형태로 공개할 계획입니다.
+        </p>
+        <p className="text-sm text-gray-500 mt-4 italic">
+          *디자인과 내용들은 예시이며, 추후 변동될 수 있습니다
+        </p>
       </div>
     </div>
   );
