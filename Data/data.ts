@@ -15,6 +15,7 @@ interface ReviewType {
 }
 
 interface AboutInfoType {
+  title?: string; // Add this property
   description: string;
   client: string;
   experience: string;
@@ -94,6 +95,7 @@ export const clientReviews: ReviewType[] = [
 ];
 
 export const aboutInfo: AboutInfoType = {
+  //title: "공약 세부 설명", // Add this line with an appropriate title
   description: "",
   client: "50+",
   experience: "3+",
