@@ -55,7 +55,7 @@ const PolicySection = () => {
 
 const SectionPanel = ({ section }: { section: PolicySection }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, threshold: 0.3 });
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
   const controls = useAnimation();
 
   useEffect(() => {
