@@ -15,7 +15,7 @@ interface ReviewType {
 }
 
 interface AboutInfoType {
-  title?: string; // Add this property
+  title?: string;
   description: string;
   client: string;
   experience: string;
@@ -37,13 +37,6 @@ interface ProjectType {
   url: string;
 }
 
-// interface SkillType {
-//   id: number;
-//   title: string;
-//   image: string;
-//   percent: string;
-// }
-
 interface BlogType {
   id: number;
   title: string;
@@ -57,6 +50,22 @@ interface ContactDataType {
   email: string;
   address: string;
 }
+
+// White calendar SVG generator function
+const whiteCalendarSvg = (month: string) => `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+  <rect x="10" y="20" width="80" height="70" stroke="white" stroke-width="2" fill="none" />
+  <line x1="10" y1="40" x2="90" y2="40" stroke="white" stroke-width="2" />
+  <line x1="30" y1="20" x2="30" y2="10" stroke="white" stroke-width="2" />
+  <line x1="70" y1="20" x2="70" y2="10" stroke="white" stroke-width="2" />
+  <text x="50" y="67" font-family="Arial" font-size="20" fill="white" text-anchor="middle">${month}</text>
+</svg>
+`;
+
+// Function to convert SVG to data URI
+const svgToDataUri = (svg: string) => {
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+};
 
 // Export data with types
 export const BaseInfo: BaseInfoType = {
@@ -95,7 +104,6 @@ export const clientReviews: ReviewType[] = [
 ];
 
 export const aboutInfo: AboutInfoType = {
-  //title: "공약 세부 설명", // Add this line with an appropriate title
   description: "",
   client: "50+",
   experience: "3+",
@@ -108,77 +116,77 @@ export const servicesData: ServiceType[] = [
     id: 1,
     title: "2025 년 6월",
     description: "여름 방학",
-    icon: "/images/march.png",
+    icon: svgToDataUri(whiteCalendarSvg("JUN")),
   },
   {
     id: 2,
     title: "2025 년 7월",
     description: "여름 방학",
-    icon: "/images/april.png",
+    icon: svgToDataUri(whiteCalendarSvg("JUL")),
   },
   {
     id: 3,
     title: "2025 년 8월",
     description:
       "신입생 환영회\n신입생 오리엔테이션\n썸컴 모집\n신규동아리 모집\n과잠 및 KSA 옷 분배",
-    icon: "/images/may.png",
+    icon: svgToDataUri(whiteCalendarSvg("AUG")),
   },
   {
     id: 4,
     title: "2025 년 9월",
     description:
       "개강총회 (BePain) 및 개강파티\n맨토맨티 모집\nMT\n과잠 및 KSA 옷 분배\n 보트파티",
-    icon: "/images/june.png",
+    icon: svgToDataUri(whiteCalendarSvg("SEP")),
   },
   {
     id: 5,
     title: "2025 년 10월",
     description: "중간고사 이벤트",
-    icon: "/images/july.png",
+    icon: svgToDataUri(whiteCalendarSvg("OCT")),
   },
   {
     id: 6,
     title: "2025 년 11월",
     description: "eSports (리그 오브 레전드)\n썸컴 기획 이벤트",
-    icon: "/images/aug.png",
+    icon: svgToDataUri(whiteCalendarSvg("NOV")),
   },
   {
     id: 7,
     title: "2025 년 12월",
     description: "기말고사 이벤트\n새해인사",
-    icon: "/images/sep.png",
+    icon: svgToDataUri(whiteCalendarSvg("DEC")),
   },
   {
     id: 8,
     title: "2026 년 1월",
     description: "겨울 방학",
-    icon: "/images/oct.png",
+    icon: svgToDataUri(whiteCalendarSvg("JAN")),
   },
   {
     id: 9,
     title: "2026 년 2월",
     description:
       "개강총회 및 개강파티\n 봄맞이 소개팅 \n 과기대 내 타 학생회 연합 이벤트",
-    icon: "/images/nov.png",
+    icon: svgToDataUri(whiteCalendarSvg("FEB")),
   },
   {
     id: 10,
     title: "2026 년 3월",
     description:
       "삼일절 이벤트\n다음 학생회 기수 지원 및 투표\n중간고사 이벤트",
-    icon: "/images/dec.png",
+    icon: svgToDataUri(whiteCalendarSvg("MAR")),
   },
   {
     id: 11,
     title: "2026 년 4월",
     description: "미드텀 브레이크 이벤트",
-    icon: "/images/jan.png",
+    icon: svgToDataUri(whiteCalendarSvg("APR")),
   },
   {
     id: 12,
     title: "2026 년 5월",
     description: "기말고사 이벤트\n기수 마무리 인사\n다음 기수 인수인계",
-    icon: "/images/feb.png",
+    icon: svgToDataUri(whiteCalendarSvg("MAY")),
   },
 ];
 
@@ -214,16 +222,6 @@ export const projectData: ProjectType[] = [
     url: "https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view",
   },
 ];
-
-// export const skillsData: SkillType[] = [
-//   {
-//     id: 1,
-//     title: "React",
-//     image: "/images/react.svg",
-//     percent: "90%",
-//   },
-//   // ... other skills data
-// ];
 
 export const blogs: BlogType[] = [
   {
