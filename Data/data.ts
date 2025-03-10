@@ -73,7 +73,7 @@ export const clientReviews: ReviewType[] = [
     review:
       'KSA 회장직에 출마하는 21학번 Marketing 전공 권혁인입니다.\n\n✦ 투명하고 열린 학생회 운영\n✦ 한국 문화 전파 및 학생 간 유대감 강화\n✦ 참여형 이벤트로 즐거운 대학생활 구축\n✦ 적극적 소통으로 실질적 변화 추구\n\n"여러분의 목소리가 KSA의 미래입니다. 함께 만들어가겠습니다."',
     rating: 4.6,
-    profession: "KSA President\n카카오톡 아이디: your_kakao_id",
+    profession: "KSA President\n카카오톡 아이디: hyekin",
     image: "/images/u3.png",
   },
   {
@@ -81,7 +81,7 @@ export const clientReviews: ReviewType[] = [
     review:
       'External Vice President로 출마하는 21학번 Operation Management 전공 김희승입니다.\n\n✦ 학생 의견 최우선 정책 수립\n✦ 정기적 소통 창구 운영\n✦ 신입생-재학생 네트워킹 활성화\n✦ 다양한 커뮤니티와 협업 확대\n\n"더 즐겁고, 더 가치 있는 대학 생활을 만들겠습니다."',
     rating: 4.6,
-    profession: "External Vice President\n카카오톡 아이디: your_kakao_id",
+    profession: "External Vice President\n카카오톡 아이디: khs030106",
     image: "/images/u1.png",
   },
   {
@@ -89,7 +89,7 @@ export const clientReviews: ReviewType[] = [
     review:
       'Internal Vice President로 출마하는 21학번 MGMT 전공 김수형입니다.\n\n✦ 지속적인 학기 중 이벤트 기획\n✦ 월간 회계·일정·회의록 공개\n✦ 다국적 이벤트 주관\n✦ 학생 의견 기반 프로그램 개발\n\n"11년부터 이어진 한인회, 15기에서 잊지 못할 변화를 만들겠습니다."',
     rating: 4.6,
-    profession: "Internal Vice Presiden\n카카오톡 아이디: your_kakao_id",
+    profession: "Internal Vice Presiden\n카카오톡 아이디: suhyeong829",
     image: "/images/u2.png",
   },
 ];
@@ -192,13 +192,13 @@ export const projectData: ProjectType[] = [
   {
     id: 2,
     title: "",
-    image: "/images/p2.png",
+    image: "/images/p5.png",
     url: "https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view",
   },
   {
     id: 3,
     title: "",
-    image: "/images/p3.png",
+    image: "/images/p2.png",
     url: "https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view",
   },
   {
@@ -210,7 +210,7 @@ export const projectData: ProjectType[] = [
   {
     id: 5,
     title: "",
-    image: "/images/p5.png",
+    image: "/images/p3.png",
     url: "https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view",
   },
 ];

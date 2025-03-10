@@ -29,7 +29,7 @@ const Nav = ({ openNav }: Props) => {
   const navLinks: NavLink[] = [{ id: 1, label: "Home", url: "/" }];
 
   // Add the voting URL here
-  const votingUrl = "https://forms.gle/yourVotingFormLink";
+  const votingUrl = "https://www.instagram.com/p/DG-T1vNv01c/";
 
   // Countdown timer
   useEffect(() => {
