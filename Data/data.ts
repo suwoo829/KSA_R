@@ -98,7 +98,7 @@ export const clientReviews: ReviewType[] = [
     review:
       'Internal Vice President로 출마하는 21학번 MGMT 전공 김수형입니다.\n\n✦ 지속적인 학기 중 이벤트 기획\n✦ 월간 회계·일정·회의록 공개\n✦ 다국적 이벤트 주관\n✦ 학생 의견 기반 프로그램 개발\n\n"11년부터 이어진 한인회, 15기에서 잊지 못할 변화를 만들겠습니다."',
     rating: 4.6,
-    profession: "Internal Vice Presiden\n카카오톡 아이디: suhyeong829",
+    profession: "Internal Vice President\n카카오톡 아이디: suhyeong829",
     image: "/images/u2.png",
   },
 ];
@@ -206,19 +206,19 @@ export const projectData: ProjectType[] = [
   {
     id: 3,
     title: "",
-    image: "/images/p2.png",
+    image: "/images/p3.png",
     url: "https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view",
   },
   {
     id: 4,
     title: "",
-    image: "/images/p4.png",
+    image: "/images/p2.png",
     url: "https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view",
   },
   {
     id: 5,
     title: "",
-    image: "/images/p3.png",
+    image: "/images/p4.png",
     url: "https://drive.google.com/file/d/1K4RaSoFmUdTm7k_PGivcpSk3MnEDaLRC/view",
   },
 ];
